@@ -3,23 +3,29 @@
 ## 📁 Project Structure
 ```
 codexus/
-├── public/
-│   ├── index.html    ← Main webpage (edit content here)
-│   ├── style.css     ← All styling/colors
-│   └── app.js        ← Frontend behaviour
+├── index.html         ← Main webpage (edit content here)
+├── style.css          ← All styling/colors
+├── app.js             ← Frontend behaviour
 ├── api/
-│   └── contact.js    ← Contact form backend (Vercel)
-├── server.js          ← Local Node.js server
+│   └── contact.js     ← Contact form backend (Vercel serverless function)
+├── server.js          ← Local Node.js server (for running locally only)
 ├── package.json
-├── vercel.json        ← Vercel deployment config
+├── vercel.json        ← Vercel config (intentionally minimal — see note below)
 └── README.md          ← This file
 ```
+
+> **Why are the HTML/CSS/JS files at the root and not in a `public/` folder?**
+> Vercel automatically serves static files from the project root and automatically
+> turns any file inside the `api/` folder into a serverless function. Keeping this
+> layout means **no routing config is needed** — `index.html` is served at `/` and
+> the form endpoint lives at `/api/contact` with zero extra setup. The old `public/`
+> + `builds`/`routes` setup is what caused the `404: NOT_FOUND` error.
 
 ---
 
 ## ✏️ HOW TO EDIT CONTENT
 
-All editable fields are marked with `<!-- ✏️ EDIT -->` comments in `public/index.html`.
+All editable fields are marked with `<!-- ✏️ EDIT -->` comments in `index.html`.
 
 ### 1. Team / Creators
 Search for `EDIT CREATOR 1` and `EDIT CREATOR 2` in `index.html`. Update:
@@ -59,8 +65,8 @@ Change these to rebrand the entire site instantly.
 ### Quick Deploy
 1. Push this folder to a GitHub repository
 2. Go to [vercel.com](https://vercel.com) → New Project → Import your repo
-3. Vercel auto-detects the config. Click **Deploy**
-4. Done! Your site is live.
+3. Leave all build settings as their defaults (Framework Preset: **Other**, no build command, no output directory). Click **Deploy**
+4. Done! Your site is live at `/`, and the form posts to `/api/contact`.
 
 ### Set Up Email (for the contact form)
 In Vercel dashboard → Your Project → **Settings → Environment Variables**, add:
@@ -72,6 +78,8 @@ In Vercel dashboard → Your Project → **Settings → Environment Variables**,
 | EMAIL_TO     | email where orders go to       |
 
 *Get Gmail App Password: Google Account → Security → 2-Step Verification → App Passwords
+
+Redeploy after adding the variables (Deployments tab → ⋯ → Redeploy).
 
 ---
 
@@ -98,7 +106,7 @@ Search for the package name in `index.html` (e.g. `Bronze`, `Silver`, `Gold`) an
 ---
 
 ## 💬 WhatsApp Order Fallback
-If the email is not configured, the contact form will automatically open WhatsApp with a pre-filled message when submitted. Make sure the WhatsApp number in `app.js` (line ~56) matches the one in `index.html`.
+If the email is not configured, the contact form will automatically open WhatsApp with a pre-filled message when submitted. Make sure the WhatsApp number in `app.js` matches the one in `index.html`.
 
 ---
 
