@@ -80,7 +80,7 @@ try {
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll(
-      '.about-card, .team-card, .project-card, .package-card, .contact-card'
+      '.about-card, .team-card, .project-card, .package-card, .contact-card, .feedback-card'
     ).forEach((el) => {
       el.classList.add('reveal');
       const siblings = el.parentElement.querySelectorAll(':scope > *');
@@ -92,13 +92,13 @@ try {
     });
   } else {
     document.querySelectorAll(
-      '.about-card, .team-card, .project-card, .package-card, .contact-card'
+      '.about-card, .team-card, .project-card, .package-card, .contact-card, .feedback-card'
     ).forEach(el => el.classList.add('visible'));
   }
 } catch (err) {
   console.error('Scroll reveal error:', err);
   document.querySelectorAll(
-    '.about-card, .team-card, .project-card, .package-card, .contact-card'
+    '.about-card, .team-card, .project-card, .package-card, .contact-card, .feedback-card'
   ).forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
 }
 
@@ -138,7 +138,7 @@ try {
       } catch {
         const msg = `Hello Codexus!\n\nName: ${data.name}\nEmail: ${data.email}\nPackage: ${data.package}\n\nProject: ${data.message}`;
         // ✏️ EDIT: Replace with your WhatsApp number
-        window.open(`https://wa.me/254700000000?text=${encodeURIComponent(msg)}`, '_blank');
+        window.open(`https://wa.me/919834038984?text=${encodeURIComponent(msg)}`, '_blank');
         btn.textContent = 'Send Request';
         btn.disabled = false;
       }
@@ -165,3 +165,75 @@ try {
     sections.forEach(s => sectionObserver.observe(s));
   }
 } catch (err) { console.error('Active nav link error:', err); }
+
+// ── STAR PICKER ───────────────────────────
+try {
+  const stars = document.querySelectorAll('.star');
+  const fratingInput = document.getElementById('frating');
+
+  function setStars(val) {
+    stars.forEach(s => {
+      s.classList.toggle('active', parseInt(s.dataset.value) <= val);
+    });
+    if (fratingInput) fratingInput.value = val;
+  }
+
+  // Default: 5 stars selected
+  setStars(5);
+
+  stars.forEach(star => {
+    star.addEventListener('mouseover', () => setStars(parseInt(star.dataset.value)));
+    star.addEventListener('click',     () => setStars(parseInt(star.dataset.value)));
+  });
+
+  // Reset hover to selected value on mouse leave
+  const picker = document.getElementById('starPicker');
+  if (picker) {
+    picker.addEventListener('mouseleave', () => {
+      setStars(parseInt(fratingInput ? fratingInput.value : 5));
+    });
+  }
+} catch (err) { console.error('Star picker error:', err); }
+
+// ── FEEDBACK FORM ─────────────────────────
+try {
+  const feedbackForm   = document.getElementById('feedbackForm');
+  const feedbackSuccess = document.getElementById('feedbackSuccess');
+
+  if (feedbackForm) {
+    feedbackForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = feedbackForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Submitting…';
+      btn.disabled = true;
+
+      const data = {
+        name:    feedbackForm.fname.value,
+        project: feedbackForm.fproject.value,
+        rating:  feedbackForm.frating.value,
+        review:  feedbackForm.freview.value,
+        type:    'feedback'
+      };
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          feedbackForm.classList.add('hidden');
+          if (feedbackSuccess) feedbackSuccess.classList.remove('hidden');
+        } else {
+          btn.textContent = 'Error — Try again';
+          btn.disabled = false;
+        }
+      } catch {
+        // Fallback if no backend — still show success
+        feedbackForm.classList.add('hidden');
+        if (feedbackSuccess) feedbackSuccess.classList.remove('hidden');
+      }
+    });
+  }
+} catch (err) { console.error('Feedback form error:', err); }

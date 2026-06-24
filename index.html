@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,22 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <script>document.documentElement.classList.remove('no-js');</script>
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-logo">
         <div class="logo-icon">
-          <!-- Codexus Logo: navy filled disc + white X + gold C arc + gold outer ring -->
           <svg width="46" height="46" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Outer thin gold ring -->
             <circle cx="50" cy="50" r="47" stroke="#C9A84C" stroke-width="2.5" fill="none"/>
-            <!-- Navy filled inner disc -->
             <circle cx="50" cy="50" r="38" fill="#0D1B2A"/>
-            <!-- White X — two diagonal lines crossing centre -->
             <line x1="30" y1="30" x2="70" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
             <line x1="70" y1="30" x2="30" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
-            <!-- Gold C arc — large arc open to the right, sits on left side -->
             <path d="M 50 14 A 36 36 0 1 0 50 86" stroke="#C9A84C" stroke-width="5.5" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
@@ -35,6 +31,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#packages">Packages</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#feedback">Feedback</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -47,19 +44,13 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">Web Development Studio</p>
-
-      <!-- Hero lockup: logo emblem + CODEXUS wordmark, mirroring the screenshot -->
       <div class="hero-lockup-row">
         <div class="hero-emblem">
           <svg width="130" height="130" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Outer gold ring -->
             <circle cx="50" cy="50" r="47" stroke="#C9A84C" stroke-width="2.5" fill="none"/>
-            <!-- Navy filled disc -->
             <circle cx="50" cy="50" r="38" fill="#0D1B2A"/>
-            <!-- White X -->
             <line x1="30" y1="30" x2="70" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
             <line x1="70" y1="30" x2="30" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
-            <!-- Gold C arc (large, open right) -->
             <path d="M 50 14 A 36 36 0 1 0 50 86" stroke="#C9A84C" stroke-width="5.5" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
@@ -69,7 +60,6 @@
           <p class="hero-sub-label">WEB DEVELOPMENT</p>
         </div>
       </div>
-
       <p class="hero-tagline">Harnessing AI to shape the future of the web</p>
       <div class="hero-cta-row">
         <a href="#packages" class="btn-primary">View Packages</a>
@@ -78,14 +68,10 @@
     </div>
     <div class="hero-logo-mark">
       <svg width="340" height="340" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.09">
-        <!-- Outer gold ring -->
         <circle cx="50" cy="50" r="47" stroke="#C9A84C" stroke-width="2.5" fill="none"/>
-        <!-- Navy disc -->
         <circle cx="50" cy="50" r="38" fill="#1E3250"/>
-        <!-- White X -->
         <line x1="30" y1="30" x2="70" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
         <line x1="70" y1="30" x2="30" y2="70" stroke="white" stroke-width="7" stroke-linecap="round"/>
-        <!-- Gold C arc -->
         <path d="M 50 14 A 36 36 0 1 0 50 86" stroke="#C9A84C" stroke-width="5.5" fill="none" stroke-linecap="round"/>
       </svg>
     </div>
@@ -103,28 +89,24 @@
         <h2 class="section-title">Who We Are</h2>
         <div class="title-underline"></div>
       </div>
-
       <div class="about-grid">
         <div class="about-card about-main">
           <div class="about-icon">⚡</div>
           <h3>Our Story</h3>
           <!-- ✏️ EDIT: Update the company description below -->
-          <p>Codexus is a premium digital innovation and web development studio dedicated to transforming ideas into intelligent digital experiences. Founded with the vision of bridging advanced artificial intelligence with practical business solutions, we help brands, startups, and enterprises build a stronger digital presence through innovative technology, strategic design, and world-class development. Our mission is to create digital solutions that not only look exceptional but also drive measurable growth, efficiency, and long-term value.
-
-We specialize in crafting high-performance websites, custom web applications, and AI-powered platforms tailored to the unique goals of each client. By combining modern development practices with the latest advancements in artificial intelligence, we deliver solutions that enhance user experiences, streamline operations, and empower businesses to scale with confidence. Every project is built with a focus on performance, security, scalability, and seamless functionality, ensuring lasting success in an increasingly competitive digital landscape.
-
-At Codexus, we believe technology should be a catalyst for innovation. Our collaborative approach, attention to detail, and commitment to excellence enable us to create future-ready digital products that help businesses stay ahead of industry trends and unlock new opportunities. More than a development studio, we are a strategic technology partner dedicated to helping our clients lead, innovate, and thrive in the digital era.
-</p>
+          <p>Codexus is a premium digital innovation and web development studio dedicated to transforming ideas into intelligent digital experiences. Founded with the vision of bridging advanced artificial intelligence with practical business solutions, we help brands, startups, and enterprises build a stronger digital presence through innovative technology, strategic design, and world-class development. Our mission is to create digital solutions that not only look exceptional but also drive measurable growth, efficiency, and long-term value.</p>
+          <br/>
+          <p>We specialize in crafting high-performance websites, custom web applications, and AI-powered platforms tailored to the unique goals of each client. By combining modern development practices with the latest advancements in artificial intelligence, we deliver solutions that enhance user experiences, streamline operations, and empower businesses to scale with confidence.</p>
+          <br/>
+          <p>At Codexus, we believe technology should be a catalyst for innovation. More than a development studio, we are a strategic technology partner dedicated to helping our clients lead, innovate, and thrive in the digital era.</p>
         </div>
-
         <div class="about-card">
-          <div class="about-icon"></div>
+          <div class="about-icon">📅</div>
           <h3>Established</h3>
-          <!-- ✏️ EDIT: Update the year and founding story -->
+          <!-- ✏️ EDIT: Update the year -->
           <p class="about-year">2026</p>
           <p>Founded by two passionate developers who saw the untapped potential of merging AI-driven development with modern web technologies.</p>
         </div>
-
         <div class="about-card">
           <div class="about-icon">🎯</div>
           <h3>Our Motto</h3>
@@ -133,7 +115,6 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
           </blockquote>
           <p>Every line of code we write is a step toward a smarter, AI-integrated future for the web.</p>
         </div>
-
         <div class="about-card">
           <div class="about-icon">🚀</div>
           <h3>What Drives Us</h3>
@@ -143,7 +124,7 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
     </div>
   </section>
 
-  <!-- ═══════════ PORTFOLIO / TEAM ═══════════ -->
+  <!-- ═══════════ TEAM ═══════════ -->
   <section class="section team-section" id="portfolio">
     <div class="container">
       <div class="section-header">
@@ -151,60 +132,55 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
         <h2 class="section-title">Meet the Creators</h2>
         <div class="title-underline"></div>
       </div>
-
       <div class="team-grid">
 
-        <!-- ✏️ EDIT CREATOR 1: Update all fields below -->
+        <!-- ✏️ EDIT CREATOR 1 -->
         <div class="team-card">
           <div class="team-avatar">
             <div class="avatar-circle">
-              <span class="avatar-initials">AJ</span>
+              <span class="avatar-initials">AJ</span><!-- ✏️ Initials -->
             </div>
             <div class="avatar-ring"></div>
           </div>
           <div class="team-info">
-            <h3 class="team-name">Aaryan Jain</h3>
-            <!-- ✏️ Role -->
-            <p class="team-role">Co-Founder</p>
-            <!-- ✏️ Location -->
-            <p class="team-location">📍 Delhi NCR, India</p>
-            <!-- ✏️ Description -->
+            <h3 class="team-name">Aaryan Jain</h3><!-- ✏️ Name -->
+            <p class="team-role">Co-Founder</p><!-- ✏️ Role -->
+            <p class="team-location">📍 Delhi NCR, India</p><!-- ✏️ Location -->
+            <!-- ✏️ Bio -->
             <p class="team-bio">Skilled developer with a passion for AI integration and scalable web architecture. Specializes in AI prompting and Terminal. Believes every problem has an elegant code-based solution.</p>
             <div class="team-skills">
+              <!-- ✏️ Skills -->
               <span class="skill-tag">HTML/CSS</span>
               <span class="skill-tag">UI/UX</span>
               <span class="skill-tag">Bash</span>
               <span class="skill-tag">AI/ML</span>
             </div>
-            <!-- ✏️ Email -->
-            <a href="mailto:aaryanjain382@gmail.com" class="team-email">aaryanjain382@gmail.com</a>
+            <a href="mailto:aaryanjain382@gmail.com" class="team-email">aaryanjain382@gmail.com</a><!-- ✏️ Email -->
           </div>
         </div>
 
-        <!-- ✏️ EDIT CREATOR 2: Update all fields below -->
+        <!-- ✏️ EDIT CREATOR 2 -->
         <div class="team-card">
           <div class="team-avatar">
             <div class="avatar-circle">
-              <span class="avatar-initials">AJ</span>
+              <span class="avatar-initials">AJ</span><!-- ✏️ Initials -->
             </div>
             <div class="avatar-ring"></div>
           </div>
           <div class="team-info">
-            <h3 class="team-name">Advik Jain</h3>
-            <!-- ✏️ Role -->
-            <p class="team-role"> Co-Founder</p>
-            <!-- ✏️ Location -->
-            <p class="team-location">📍 Delhi NCR, India</p>
-            <!-- ✏️ Description -->
+            <h3 class="team-name">Advik Jain</h3><!-- ✏️ Name -->
+            <p class="team-role">Co-Founder</p><!-- ✏️ Role -->
+            <p class="team-location">📍 Delhi NCR, India</p><!-- ✏️ Location -->
+            <!-- ✏️ Bio -->
             <p class="team-bio">Creative technologist blending design thinking with development expertise. Expert in crafting intuitive user interfaces and AI-powered experiences. Turns complex ideas into clean, usable digital products.</p>
             <div class="team-skills">
+              <!-- ✏️ Skills -->
               <span class="skill-tag">Creative</span>
               <span class="skill-tag">AI Prompting</span>
               <span class="skill-tag">Python</span>
               <span class="skill-tag">AI/ML</span>
             </div>
-            <!-- ✏️ Email -->
-            <a href="mailto:advikjn2610@gmail.com" class="team-email">advikjn2610@gmail.com</a>
+            <a href="mailto:advikjn2610@gmail.com" class="team-email">advikjn2610@gmail.com</a><!-- ✏️ Email -->
           </div>
         </div>
 
@@ -221,11 +197,12 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
         <div class="title-underline"></div>
       </div>
 
-      <!-- HOW TO UPDATE PROJECTS:
-           1. To add a completed project: copy a .project-card div with class "completed" and paste it inside #completed-list
-           2. To add a pending project: copy a .project-card div with class "pending" and paste it inside #pending-list
-           3. Change the title, description, tech tags, and date
-           4. The status badge updates automatically based on the "completed" or "pending" class
+      <!--
+        HOW TO UPDATE PROJECTS:
+        1. Completed: copy a .project-card.completed block, paste inside #completed-list, edit fields
+        2. Pending:   copy a .project-card.pending block,   paste inside #pending-list,   edit fields
+        3. Screenshot: replace the src="https://placehold.co/..." with your real screenshot path e.g. "images/benkyo.jpg"
+        4. Live link:  replace href="#" with the real URL e.g. "https://benkyo.vercel.app"
       -->
 
       <div class="projects-tabs">
@@ -236,36 +213,42 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
       <div class="tab-content active" id="completed-tab">
         <div class="projects-grid" id="completed-list">
 
-          <!-- ✏️ PROJECT CARD — COMPLETED (copy this block to add more) -->
+          <!-- ✏️ PROJECT CARD — COMPLETED -->
           <div class="project-card completed">
             <div class="project-status-badge">Completed</div>
+            <!-- ✏️ SCREENSHOT: replace src with real screenshot e.g. "images/benkyo.jpg" -->
+            <div class="project-screenshot">
+              <img src="https://placehold.co/400x220/0D1B2A/C9A84C?text=Benkyo+Study+Timer" alt="Benkyo Pomodoro Study Timer screenshot" class="project-img" />
+            </div>
             <div class="project-icon">🧠</div>
-            <h4 class="project-title">Benkyo-Pomodoro Study Timer</h4>
-            <p class="project-desc">A sleek product showcase website for a local fashion brand with mobile-first design and WhatsApp order integration.</p>
+            <h4 class="project-title">Benkyo – Pomodoro Study Timer</h4>
+            <p class="project-desc">A focused Pomodoro study timer with session tracking, task management, and a clean distraction-free interface built for students and professionals.</p>
             <div class="project-tags">
               <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
             <p class="project-date">📅 Delivered: June 2026</p>
+            <!-- ✏️ LINK: replace # with the real live URL -->
+            <a href="#" class="project-link" target="_blank">🔗 View Live Site</a>
           </div>
+
         </div>
       </div>
 
       <div class="tab-content" id="pending-tab">
         <div class="projects-grid" id="pending-list">
 
-          <!-- ✏️ PROJECT CARD — PENDING (copy this block to add more) -->
+          <!-- ✏️ PROJECT CARD — PENDING -->
           <div class="project-card pending">
             <div class="project-status-badge pending">In Progress</div>
-            <div class="project-icon">🛒</div>
-            <h4 class="project-title">Unnamed Calculator app</h4>
-            <p class="project-desc">An Advanced calculator app with scientific, basic and unit converter functionality.</p>
+            <div class="project-icon">🧮</div>
+            <h4 class="project-title">Calcify – Advanced Calculator</h4>
+            <p class="project-desc">An advanced calculator app with scientific, basic, and unit converter functionality. Clean UI with history tape and localStorage persistence.</p>
             <div class="project-tags">
-              <span>Node.js</span><span>JavaScript</span><span>CSS</span>
+              <span>JavaScript</span><span>CSS</span><span>HTML</span>
             </div>
             <p class="project-date">📅 Expected: July 2026</p>
           </div>
 
-        
         </div>
       </div>
 
@@ -281,7 +264,6 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
         <div class="title-underline"></div>
         <p class="section-subtitle">Choose the plan that fits your needs. All packages include mobile-responsive design.</p>
       </div>
-
       <div class="packages-grid">
 
         <!-- BRONZE -->
@@ -364,18 +346,16 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
         <div class="title-underline"></div>
         <p class="section-subtitle">Ready to build something great? Reach out via WhatsApp or email and we'll respond within 24 hours.</p>
       </div>
-
       <div class="contact-grid">
 
         <div class="contact-card whatsapp-card">
           <div class="contact-icon">💬</div>
           <h3>WhatsApp Us</h3>
           <p>Fastest way to reach us. Send your project brief and we'll get back to you promptly.</p>
-          <!-- ✏️ EDIT: Replace with your real WhatsApp number (include country code, no spaces) -->
-          <a href="https://wa.me/9834038984?text=Hello%20Codexus!%20I'd%20like%20to%20discuss%20a%20project." class="contact-btn whatsapp-btn" target="_blank">
+          <!-- ✏️ EDIT: WhatsApp number (country code + number, no spaces/+) -->
+          <a href="https://wa.me/919834038984?text=Hello%20Codexus!%20I'd%20like%20to%20discuss%20a%20project." class="contact-btn whatsapp-btn" target="_blank">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            <!-- ✏️ EDIT: Update display number -->
-            +919834038984
+            +91 98340 38984
           </a>
         </div>
 
@@ -383,11 +363,11 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
           <div class="contact-icon">📧</div>
           <h3>Email Us</h3>
           <p>Prefer email? Drop us a message with your project details and package preference.</p>
-          <!-- ✏️ EDIT: Replace with your real business email -->
-          <a href="advikjn2610@gmail.com" class="contact-btn email-btn">
+          <!-- ✏️ EDIT: Email addresses -->
+          <a href="mailto:advikjn2610@gmail.com" class="contact-btn email-btn">
             📨 advikjn2610@gmail.com
           </a>
-          <a href="aaryanjain382@gmail.com" class="contact-btn email-btn">
+          <a href="mailto:aaryanjain382@gmail.com" class="contact-btn email-btn" style="margin-top:10px;">
             📨 aaryanjain382@gmail.com
           </a>
         </div>
@@ -397,7 +377,6 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
           <h3>Quick Order</h3>
           <p>Tell us what you need and we'll match you with the right package.</p>
           <form class="order-form" id="orderForm">
-            <!-- ✏️ EDIT: The form submits to /api/contact — update api/contact.js with your email/WhatsApp logic -->
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
             <select name="package">
@@ -418,6 +397,93 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
     </div>
   </section>
 
+  <!-- ═══════════ FEEDBACK ═══════════ -->
+  <section class="section feedback-section" id="feedback">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Client Reviews</span>
+        <h2 class="section-title">Feedback</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">What our clients say about working with us.</p>
+      </div>
+
+      <!--
+        HOW TO ADD A NEW REVIEW:
+        Copy one .feedback-card block, paste inside #feedback-list,
+        update the initials, name, project, stars (★ filled / ☆ empty), and review text.
+      -->
+      <div class="feedback-grid" id="feedback-list">
+
+        <!-- ✏️ FEEDBACK CARD 1 — replace with real client review -->
+        <div class="feedback-card">
+          <div class="feedback-top">
+            <div class="feedback-avatar"><span>JK</span></div><!-- ✏️ Initials -->
+            <div class="feedback-meta">
+              <p class="feedback-name">James K.</p><!-- ✏️ Name -->
+              <p class="feedback-project">Benkyo Study Timer</p><!-- ✏️ Project -->
+              <div class="feedback-stars">★★★★★</div><!-- ✏️ Rating -->
+            </div>
+          </div>
+          <p class="feedback-text">"Codexus delivered exactly what I envisioned. The site was live quickly and my customers love how clean and fast it is. Highly recommend!"</p><!-- ✏️ Review -->
+        </div>
+
+        <!-- ✏️ FEEDBACK CARD 2 -->
+        <div class="feedback-card">
+          <div class="feedback-top">
+            <div class="feedback-avatar"><span>AN</span></div>
+            <div class="feedback-meta">
+              <p class="feedback-name">Amina N.</p>
+              <p class="feedback-project">Personal Portfolio Site</p>
+              <div class="feedback-stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="feedback-text">"My portfolio looks incredibly professional. The animations are smooth and it works perfectly on mobile. Got two freelance inquiries the first week!"</p>
+        </div>
+
+        <!-- ✏️ FEEDBACK CARD 3 -->
+        <div class="feedback-card">
+          <div class="feedback-top">
+            <div class="feedback-avatar"><span>BO</span></div>
+            <div class="feedback-meta">
+              <p class="feedback-name">Brian O.</p>
+              <p class="feedback-project">Web Application</p>
+              <div class="feedback-stars">★★★★☆</div>
+            </div>
+          </div>
+          <p class="feedback-text">"The team understood our requirements immediately. Great communication throughout the project and delivered clean, well-structured code."</p>
+        </div>
+
+      </div>
+
+      <!-- LEAVE A REVIEW FORM -->
+      <div class="feedback-form-wrap">
+        <h3 class="feedback-form-title">Leave Your Review</h3>
+        <p class="feedback-form-sub">Worked with us? We'd love to hear from you.</p>
+        <form class="feedback-form" id="feedbackForm">
+          <div class="feedback-form-row">
+            <input type="text" name="fname" placeholder="Your Name" required />
+            <input type="text" name="fproject" placeholder="Project Name" />
+          </div>
+          <div class="star-picker" id="starPicker">
+            <span class="star-label">Rating:</span>
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+            <input type="hidden" name="frating" id="frating" value="5" />
+          </div>
+          <textarea name="freview" placeholder="Tell us about your experience..." rows="4" required></textarea>
+          <button type="submit" class="btn-primary">Submit Review</button>
+        </form>
+        <div class="form-success hidden" id="feedbackSuccess">
+          ⭐ Thank you! Your feedback means a lot to us.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ═══════════ FOOTER ═══════════ -->
   <footer class="footer">
     <div class="container">
@@ -434,11 +500,12 @@ At Codexus, we believe technology should be a catalyst for innovation. Our colla
           <a href="#projects">Projects</a>
           <a href="#packages">Packages</a>
           <a href="#contact">Contact</a>
+          <a href="#feedback">Feedback</a>
         </div>
         <div class="footer-contact">
           <h4>Contact</h4>
           <!-- ✏️ EDIT: Update contact details -->
-          <p>💬 +919834038984</p>
+          <p>💬 +91 98340 38984</p>
           <p>📧 advikjn2610@gmail.com</p>
           <p>📧 aaryanjain382@gmail.com</p>
         </div>
